@@ -17,6 +17,7 @@ WHY paraphrase-multilingual-MiniLM-L12-v2?
 
 import os
 import re
+from typing import Dict, Any, List, Optional, Tuple
 import torch
 import torch.nn as nn
 import numpy as np
@@ -444,7 +445,7 @@ def _detect_era(text: str) -> str:
     return "any"
 
 
-def extract_constraints(text: str) -> dict:
+def extract_constraints(text: str) -> Dict[str, Any]:
     """
     Extract structured constraints from a (possibly Tanglish) query.
     
@@ -457,10 +458,16 @@ def extract_constraints(text: str) -> dict:
     6. Detect era (temporal preference: old vs new vs any)
     
     Args:
-        text: Raw query text
+        text (str): Raw input query text (English or code-mixed Tanglish)
         
     Returns:
-        dict with keys: genre, mood, language_pref, exclusions, reference_title, era
+        Dict[str, Any]: Structured constraints dictionary containing:
+            - 'genre' (str): Primary predicted genre
+            - 'mood' (str): Primary predicted mood
+            - 'language_pref' (str): 'ta', 'en', or 'any'
+            - 'exclusions' (str): Comma-separated excluded genres/traits
+            - 'reference_title' (str): Title anchor if comparison requested
+            - 'era' (str): 'old' (classic <=2005), 'new' (recent >=2016), or 'any'
     """
     # Keep original for some detections
     original_text = text
