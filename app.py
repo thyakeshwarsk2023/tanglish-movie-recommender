@@ -7,6 +7,7 @@ Supports both English and Tanglish (code-mixed Tamil-English) typed queries.
 
 import os
 import sys
+import time
 import streamlit as st
 
 # Ensure project root is importable
@@ -103,7 +104,9 @@ except AttributeError:
 if query.strip():
     with st.spinner("Analyzing your query and finding recommendations..."):
         try:
+            t_start = time.perf_counter()
             results, constraints = recommend(query.strip())
+            latency_ms = (time.perf_counter() - t_start) * 1000.0
         except Exception as e:
             st.error(f"Error processing query: {e}")
             st.stop()
@@ -111,11 +114,11 @@ if query.strip():
     # Show normalized query
     normalized = normalize_query(query)
     if normalized != query.lower().strip():
-        st.info(f"📝 **Normalized query:** {normalized}")
+        st.info(f"📝 **Normalized query:** `{normalized}`")
 
     # Show extracted constraints
     st.subheader("🧠 Understood Constraints")
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
         st.metric("Genre", constraints["genre"].title())
     with col2:
@@ -129,6 +132,8 @@ if query.strip():
         st.metric(
             "Language", lang_display.get(constraints["language_pref"], "Any")
         )
+    with col4:
+        st.metric("Latency", f"{latency_ms:.1f} ms")
 
     if constraints.get("era") and constraints.get("era") != "any":
         era_label = "Classic / Vintage (Pre-2005)" if constraints["era"] == "old" else "Recent / Modern (2016+)"
