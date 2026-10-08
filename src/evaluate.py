@@ -192,7 +192,8 @@ def _print_accuracy_table(results_df: pd.DataFrame):
     comb_e = sum(avg_en) / len(avg_en)
     comb_t = sum(avg_ta) / len(avg_ta)
     print(f"  {'Average':<22} {comb_o:>9.1%} {comb_e:>9.1%} {comb_t:>9.1%} {comb_e - comb_t:>+9.1%}")
-    print()
+    print(f"  {'-' * 64}")
+    print(f"  Composite Slot Accuracy: {comb_o:.1%} (Tanglish Accuracy: {comb_t:.1%})")
     print("  * Gap = English accuracy - Tanglish accuracy")
     print("  * Positive gap indicates performance margin on code-mixed queries.\n")
 
