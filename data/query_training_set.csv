@@ -1,0 +1,133 @@
+query_text,genre_label,mood_label
+"I want an action movie with lots of explosions",action,exciting
+"Looking for a thrilling action film",action,exciting
+"Recommend a fight movie with martial arts",action,exciting
+"Give me an intense action packed film",action,intense
+"mass action movie venum",action,exciting
+"oru nalla action padam sollunga",action,exciting
+"action thriller movie with guns and chasing",action,exciting
+"superhero action film please",action,exciting
+"war action movie with battle scenes",action,intense
+"romba mass-a oru action padam venum",action,exciting
+"I want a funny comedy movie",comedy,feel-good
+"Looking for a lighthearted comedy",comedy,feel-good
+"Recommend a hilarious film to make me laugh",comedy,feel-good
+"nalla comedy padam venum",comedy,feel-good
+"oru sirippu padam sollunga",comedy,feel-good
+"light hearted funny movie tonight",comedy,feel-good
+"comedy film with good jokes and humor",comedy,feel-good
+"romba siripu varum maari oru padam",comedy,feel-good
+"a funny movie to cheer me up",comedy,feel-good
+"family comedy with lots of laughs",comedy,feel-good
+"I want a serious drama film",drama,emotional
+"emotional drama movie that makes you cry",drama,emotional
+"Looking for a deep meaningful drama",drama,emotional
+"oru nalla azhugai varum maari drama venum",drama,emotional
+"an inspiring biographical drama please",drama,inspiring
+"nalla motivational inspiring movie",drama,inspiring
+"touching emotional family drama",drama,emotional
+"serious intense drama film",drama,intense
+"romba emotional-a oru padam sollunga",drama,emotional
+"a powerful drama about real life struggles",drama,inspiring
+"I want a scary horror movie",horror,scary
+"Looking for a terrifying horror film",horror,scary
+"Recommend a ghost movie that is really scary",horror,scary
+"horror padam venum romba bayam-a irukanum",horror,scary
+"supernatural horror movie please",horror,scary
+"a creepy horror film for tonight",horror,scary
+"bayangara padam venum",horror,scary
+"horror movie with jump scares",horror,scary
+"oru nalla horror padam Tamil la",horror,scary
+"ghost story movie that is frightening",horror,scary
+"I want a romantic love story",romance,romantic
+"Looking for a beautiful love story film",romance,romantic
+"Recommend a love movie with happy ending",romance,feel-good
+"oru nalla love story padam venum",romance,romantic
+"romantic drama movie please",romance,emotional
+"kadhal padam sollunga",romance,romantic
+"a sweet romantic comedy film",romance,feel-good
+"love story with emotional depth",romance,emotional
+"beautiful romance movie to watch with partner",romance,romantic
+"romba romantic-a oru padam",romance,romantic
+"I want a suspenseful thriller movie",thriller,suspenseful
+"Looking for a mind bending thriller",thriller,suspenseful
+"Recommend a dark crime thriller",thriller,dark
+"oru nalla thriller padam venum suspense-a",thriller,suspenseful
+"crime thriller movie with unexpected twists",thriller,suspenseful
+"mystery thriller that keeps you guessing",thriller,suspenseful
+"dark psychological thriller film",thriller,dark
+"romba suspense-a oru padam sollunga",thriller,suspenseful
+"a gripping thriller with plot twists",thriller,suspenseful
+"intense nail biting thriller movie",thriller,intense
+"I want a sci-fi movie about space",science fiction,exciting
+"futuristic science fiction film please",science fiction,exciting
+"oru nalla science fiction padam venum",science fiction,exciting
+"time travel sci-fi movie recommendation",science fiction,exciting
+"robot or AI themed sci-fi movie",science fiction,exciting
+"I need a family friendly movie for all ages",family,feel-good
+"good family movie to watch together",family,feel-good
+"oru nalla family padam sollunga",family,feel-good
+"kids friendly animation movie",family,feel-good
+"heartwarming family drama film",family,feel-good
+"I want a crime movie about gangsters",crime,dark
+"mafia crime drama film please",crime,dark
+"crime padam venum gangster story",crime,dark
+"detective crime investigation movie",crime,suspenseful
+"oru nalla crime thriller sollunga",crime,dark
+"looking for a sports movie about boxing",sports,inspiring
+"oru nalla sports padam venum",sports,inspiring
+"inspiring underdog sports film",sports,inspiring
+"give me an adventure movie with treasure hunting",adventure,exciting
+"oru adventurous padam sollunga",adventure,exciting
+"dark and moody film noir style movie",thriller,dark
+"romba dark-a oru padam venum",thriller,dark
+"uplifting movie about overcoming challenges",drama,inspiring
+"nalla inspiring movie sollunga",drama,inspiring
+"edge of your seat intense action thriller",action,intense
+"romba intense-a oru padam venum",action,intense
+"sad emotional movie about loss",drama,emotional
+"feel good movie to watch on a rainy day",comedy,feel-good
+"nalla feel good padam venum",comedy,feel-good
+"a movie with a great twist ending",thriller,suspenseful
+"mystery padam twist ending irukanum",thriller,suspenseful
+"historical period drama film",drama,emotional
+"old classic Tamil movie recommendation",drama,emotional
+"new latest Tamil blockbuster action",action,exciting
+"pudhusa vantha Tamil padam sollunga",action,exciting
+"revenge action movie with a hero",action,intense
+"pazhi vaangu padam venum",action,intense
+"college love story movie",romance,feel-good
+"college kadhal padam",romance,feel-good
+"political drama thriller movie",thriller,dark
+"oru political padam venum",thriller,dark
+"nalla comedy padam venum Tamil la",comedy,feel-good
+"Tamil comedy padam sollunga nalla siripu",comedy,feel-good
+"oru nalla Tamil comedy cinema venum",comedy,feel-good
+"super comedy film Tamil la",comedy,feel-good
+"classic Tamil comedy movie",comedy,feel-good
+"old Tamil comedy padam venum",comedy,feel-good
+"Tamil romance love story padam",romance,romantic
+"nalla Tamil kadhal padam sollunga",romance,romantic
+"romantic love movie in Tamil",romance,romantic
+"pazhaya Tamil romance padam",romance,romantic
+"pazhaya Tamil action padam venum",action,exciting
+"retro Tamil action movie",action,exciting
+"classic 80s 90s Tamil action film",action,exciting
+"Tamil science fiction padam venum",science fiction,exciting
+"sci fi time travel movie in Tamil",science fiction,exciting
+"Tamil space or alien padam",science fiction,exciting
+"emotional Tamil drama padam",drama,emotional
+"touching Tamil family drama movie",drama,emotional
+"pazhaya Tamil drama padam",drama,emotional
+"Tamil crime thriller padam",thriller,suspenseful
+"suspense Tamil mystery movie",thriller,suspenseful
+"Tamil horror ghost padam",horror,scary
+"Tamil pei padam bayangaram-a irukanum",horror,scary
+"Tamil sports movie about cricket boxing",sports,inspiring
+"family friendly Tamil movie for kids",family,feel-good
+"pudhusa Tamil action padam venum",action,exciting
+"new latest Tamil thriller movie",thriller,suspenseful
+"recent Tamil comedy movie",comedy,feel-good
+"pudhusa oru science fiction padam",science fiction,exciting
+"dark serious Tamil crime movie",crime,dark
+
