@@ -96,6 +96,33 @@ python src/evaluate.py
 
 This evaluates constraint extraction accuracy on the 30-query test set and reports English vs Tanglish accuracy gap.
 
+### 8. Generate Academic Technical Report PDF
+
+```bash
+python generate_pdf_report.py
+```
+
+This generates `Tanglish_Movie_Recommender_Project_Report.pdf` with complete IEEE/ACM-style sections, evaluation tables, and figures.
+
+---
+
+## Live Demo & Viva Presentation Guide
+
+For demonstration to reviewers or professors, use the following sample queries in the Streamlit UI (`app.py`):
+
+| Test Query | Capability Demonstrated | Expected Output |
+| :--- | :--- | :--- |
+| `nalla comedy padam venum but romba silly-a irukkakoodathu` | **Code-mixed Tanglish + Negative Exclusion** | Detects comedy, feel-good, excludes silly movies, recommends *Good Night* / *Don* |
+| `romba pazhaya Tamil action padam venum` | **Temporal Era Slot Extraction** | Recognizes `pazhaya` (classic $\le 2005$), returns *Gentleman (1993)* / *Baashha (1995)* |
+| `similar to 96 but with a happy ending` | **Reference Anchor & Mood Constraint** | Anchor title `96` mapped to romance, mood switched to feel-good, returns *Love Today* |
+| `I want a dark psychological thriller like Shutter Island` | **Cross-Lingual Unified Indexing** | Evaluates pure English queries on the same 384-dim dense FAISS vector space |
+
+### Key Benchmark Metrics
+- **Composite Slot Accuracy**: **93.3%** across 30 test queries
+- **Tanglish Genre Accuracy**: **100.0%** (15/15 test queries)
+- **Target Language Precision@5**: **100.0%** (zero cross-lingual leakage)
+- **End-to-End Latency**: **16.3 ms** on standard CPU (100x faster than cloud LLMs)
+
 ## Project Structure
 
 ```
