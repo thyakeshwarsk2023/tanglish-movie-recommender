@@ -16,6 +16,7 @@ space, enabling genuine cross-lingual retrieval.
 import os
 import sys
 import pickle
+from typing import Dict, Any, List, Optional
 import numpy as np
 import pandas as pd
 import faiss
@@ -160,7 +161,7 @@ def _genre_match_mask(series: pd.Series, genre_term: str) -> pd.Series:
 # ---------------------------------------------------------------------------
 # 2. Retrieve candidates based on constraints
 # ---------------------------------------------------------------------------
-def retrieve_candidates(constraints: dict, top_k: int = 10) -> list:
+def retrieve_candidates(constraints: Dict[str, Any], top_k: int = 10) -> List[Dict[str, Any]]:
     """
     Retrieve top-K movie candidates based on extracted constraints.
     
@@ -172,11 +173,12 @@ def retrieve_candidates(constraints: dict, top_k: int = 10) -> list:
     5. FAISS candidate search + scoring bonuses for exact genre and era alignment
     
     Args:
-        constraints: dict with keys genre, mood, language_pref, exclusions, reference_title, era
-        top_k: Number of results to return
+        constraints (Dict[str, Any]): Dictionary with keys genre, mood, language_pref, exclusions, reference_title, era
+        top_k (int): Number of results to return (default: 10)
         
     Returns:
-        List of dicts: {movie_id, title, overview, language, genres, release_year, similarity_score}
+        List[Dict[str, Any]]: List of candidate dicts:
+            {movie_id, title, overview, language, genres, release_year, similarity_score}
     """
     import re
     catalog = _load_catalog()
@@ -217,6 +219,8 @@ def retrieve_candidates(constraints: dict, top_k: int = 10) -> list:
             mask = genre_mask
 
     filtered_indices = catalog[mask].index.to_numpy()
+    if len(filtered_indices) == 0:
+        filtered_indices = catalog.index.to_numpy()
 
     if len(filtered_indices) == 0:
         # Stepwise fallback: relax era and genre, retain exclusions and language
