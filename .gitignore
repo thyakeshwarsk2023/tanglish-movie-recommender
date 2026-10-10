@@ -42,3 +42,8 @@ models/paraphrase-multilingual-MiniLM-L12-v2/
 # data/catalog.csv
 # data/tanglish_test_queries.csv
 # data/query_training_set.csv
+
+# Local audit and final report artifacts
+antigravity_evidence_audit/
+report_final/
+*.docx

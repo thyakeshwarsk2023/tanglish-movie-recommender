@@ -96,14 +96,6 @@ python src/evaluate.py
 
 This evaluates constraint extraction accuracy on the 30-query test set and reports English vs Tanglish accuracy gap.
 
-### 8. Generate Academic Technical Report PDF
-
-```bash
-python generate_pdf_report.py
-```
-
-This generates `Tanglish_Movie_Recommender_Project_Report.pdf` with complete IEEE/ACM-style sections, evaluation tables, and figures.
-
 ---
 
 ## Live Demo & Viva Presentation Guide
